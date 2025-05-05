@@ -1,0 +1,243 @@
+[
+  {
+    "v": 6,
+    "name": "Book Review API",
+    "folders": [],
+    "requests": [
+      {
+        "v": "11",
+        "name": "login",
+        "method": "POST",
+        "endpoint": "http://localhost:5004/api/auth/login",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"username\": \"admin@qut.com\",\n  \"password\": \"admin123\"\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Get Books",
+        "method": "GET",
+        "endpoint": "http://localhost:5004/api/books?page=1&limit=4",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjA5OTc4NCwiZXhwIjoxNzQ2MTAzMzg0fQ.pZWRupcRsnTcqZaxmu4cYU6rqUrvJJRfKUphGTRcj8U\"",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Register",
+        "method": "POST",
+        "endpoint": "http://localhost:5004/api/auth/register",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"username\": \"123456@qut.com\",\n  \"password\": \"123456\"\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Create Book",
+        "method": "POST",
+        "endpoint": "http://localhost:5004/api/books",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"title\": \"booktest\",\n  \"author\": \"authortest\",\n  \"description\": \"descriptiontest\",\n  \"publishDate\": \"2025-05-01T00:00:00.000Z\",\n  \"isbn\": \"1234567890\",\n  \"coverImage\": \"https://covers.openlibrary.org/b/id/12890030-L.jpg\"\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Get Book Details",
+        "method": "GET",
+        "endpoint": "http://localhost:5004/api/books/6811ae874c6bee887f9b2f71",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Update Book",
+        "method": "PUT",
+        "endpoint": "http://localhost:5004/api/books/6811ae874c6bee887f9b2f71",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"_id\": \"6811ae874c6bee887f9b2f71\",\n  \"title\": \"book1update\",\n  \"author\": \"author1\",\n  \"description\": \"decription\",\n  \"publishDate\": \"2025-04-24T14:00:00.000Z\",\n  \"isbn\": \"1\",\n  \"coverImage\": \"https://covers.openlibrary.org/b/id/12890030-L.jpg\",\n  \"averageRating\": 4,\n  \"totalRatings\": 1,\n  \"addedBy\": \"6811aae14c6bee887f9b2f58\",\n  \"__v\": 0\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Delete Book",
+        "method": "DELETE",
+        "endpoint": "http://localhost:5004/api/books/681363a6e05c8bad811fb81b",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Get Reviews for a Book",
+        "method": "GET",
+        "endpoint": "http://localhost:5004/api/reviews/book/6811e40e1055250bbf36030e",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "inherit",
+          "authActive": true
+        },
+        "body": {
+          "contentType": null,
+          "body": null
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Post Review",
+        "method": "POST",
+        "endpoint": "http://localhost:5004/api/reviews",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"book\": \"681365dae05c8bad811fb82d\",\n  \"rating\": 4,\n  \"comment\": \"Great book!\"\n}"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Update Review",
+        "method": "PUT",
+        "endpoint": "http://localhost:5004/api/reviews/681365e7e05c8bad811fb831",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"rating\": 5,\n  \"comment\": \"Really enjoyed \"\n}\n"
+        },
+        "requestVariables": [],
+        "responses": {}
+      },
+      {
+        "v": "11",
+        "name": "Delete Review",
+        "method": "DELETE",
+        "endpoint": "http://localhost:5004/api/reviews/681365e7e05c8bad811fb831",
+        "params": [],
+        "headers": [],
+        "preRequestScript": "",
+        "testScript": "",
+        "auth": {
+          "authType": "bearer",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjgxMWFhZTE0YzZiZWU4ODdmOWIyZjU4IiwiaXNfYWRtaW4iOnRydWUsImlhdCI6MTc0NjEwMDE4MCwiZXhwIjoxNzQ2MTAzNzgwfQ.sh48TXwsf1_uSEbxtskSr9Ex31IDCyTMFdHY91kwQpQ",
+          "authActive": true
+        },
+        "body": {
+          "contentType": "application/json",
+          "body": ""
+        },
+        "requestVariables": [],
+        "responses": {}
+      }
+    ],
+    "auth": {
+      "authType": "none",
+      "authActive": true
+    },
+    "headers": [],
+    "_ref_id": "coll_ma5a1d62_9a714815-7a9f-428f-a202-059d9288bde9"
+  }
+]

@@ -1,0 +1,12 @@
+
+n12047805.ifn666.com {
+        handle /api/* {
+                reverse_proxy localhost:5004
+        }
+        handle{
+                root * /home/ubantu/666BOOKUSERMANAGER/client/dist
+                try_files(path)/index.html
+               
+         }
+
+}
